@@ -1,5 +1,7 @@
 <?php 
     session_start();
+    
+    include 'db.php';
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -32,7 +34,61 @@
 
         <!-- Add your site or application content here -->
         <h1 class="center">Results for readings</h1>
+        <div class="container">
+            <div class="row">
+                <table class="table">
+                    <tr>
+                        <td colspan="6"><h3><?php echo $_SESSION['word']; ?></h3></td>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Book</th>
+                        <th>Chapter</th>
+                        <th>Verse</th>
+                        <th>Admonitions</th>
+                        <th>Reading</th>
+                    </tr>
+                    <tr>
+                        <td><h4>Historic</h4></td>
+                        <td><p><?php echo $_POST['history']; ?></p></td>
+                        <td><p><?php echo $_POST['historicChapter']; ?></p></td>
+                        <td><p><?php echo $_POST['historicVerse']; ?></p></td>
+                        <td><p><?php echo $_POST['historic_admonition']; ?></p></td>
+                        <td><p><?php echo $_POST['historic_reading']; ?></p></td>
+                    </tr>
+                    <tr>
+                        <td><h4>Prophets</h4></td>
+                        <td><p><?php echo $_POST['prophets']; ?></p></td>
+                        <td><p><?php echo $_POST['prophetic_chapter']; ?></p></td>
+                        <td><p><?php echo $_POST['prophetic_verse']; ?></p></td>
+                        <td><p><?php echo $_POST['prophetic_admonition']; ?></p></td>
+                        <td><p><?php echo $_POST['prophetic_reading']; ?></p></td>
+                    </tr>
+                    <tr>
+                        <td><h4>Letters</h4></td>
+                        <td><p><?php echo $_POST['letters']; ?></p></td>
+                        <td><p><?php echo $_POST['letters_chapter']; ?></p></td>
+                        <td><p><?php echo $_POST['letters_verse']; ?></p></td>
+                        <td><p><?php echo $_POST['letters_admonition']; ?></p></td>
+                        <td><p><?php echo $_POST['letters_reading']; ?></p></td>
+                    </tr>
+                    <tr>
+                        <td><h4>Gospels</h4></td>
+                        <td><p><?php echo $_POST['gospels']; ?></p></td>
+                        <td><p><?php echo $_POST['gospels_chapter']; ?></p></td>
+                        <td><p><?php echo $_POST['gospels_verse']; ?></p></td>
+                        <td><p><?php echo $_POST['gospels_admonition']; ?></p></td>
+                        <td><p>Michelle</p></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+       
         
+        
+        
+       
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
